@@ -11,7 +11,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * Created by Milind Amrutkar on 11-02-2020.
  */
 
-//https://api.themoviedb.org/3/movie/now_playing?api_key=439f54633f6733993bdfe1802c52aaf1&language=en-US&page=1
+//https://api.themoviedb.org/3/movie/now_playing?api_key=YOUR_API_KEY&language=en-US&page=1
 
 public class ApiClient {
 
