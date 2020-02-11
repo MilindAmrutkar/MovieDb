@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlMoviesLayout"
+
+    card_view:cardBackgroundColor="@color/cardview_light_background"
+    card_view:cardCornerRadius="10dp"
+    card_view:cardElevation="5dp"
+    card_view:cardUseCompatPadding="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgViewPoster"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/ic_account_box_black_24dp"/>
+
+        <TextView
+            android:id="@+id/tvMovieTitle"
+            android:layout_toRightOf="@id/imgViewPoster"
+            android:hint="Movie Title"
+            android:paddingLeft="10dp"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvMovieReleaseDate"
+            android:paddingLeft="10dp"
+            android:paddingTop="20dp"
+            android:textSize="20sp"
+            android:hint="Release date"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_below="@id/tvMovieTitle"
+            android:layout_toRightOf="@id/imgViewPoster"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:layout_centerInParent="true"
+            android:id="@+id/btnBookTicket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgViewPoster"
+            android:text="Book Ticket"/>
+
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>
