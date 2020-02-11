@@ -11,9 +11,9 @@ import com.bumptech.glide.Glide;
 
 public class MovieDetailsActivity extends AppCompatActivity {
 
-    String posterPath, title, releaseDate;
+    String posterPath, title, releaseDate, movieOverview;
     ImageView ivPosterPath;
-    TextView tvMovieTitle, tvReleaseDate;
+    TextView tvMovieTitle, tvReleaseDate, tvOverview;
 
     public static final String TAG = MovieDetailsActivity.class.getSimpleName();
 
@@ -25,10 +25,12 @@ public class MovieDetailsActivity extends AppCompatActivity {
         ivPosterPath = findViewById(R.id.ivImgPoster);
         tvMovieTitle = findViewById(R.id.tvMovieTitle);
         tvReleaseDate = findViewById(R.id.tvMovieReleaseDate);
+        tvOverview = findViewById(R.id.tvMovieOverview);
 
         releaseDate = getIntent().getExtras().getString("release_date");
         title = getIntent().getExtras().getString("movie_title");
         posterPath = getIntent().getExtras().getString("poster_path");
+        movieOverview = getIntent().getExtras().getString("overview");
 
         Log.d(TAG, "onCreate: " + releaseDate + " " + title + " " + posterPath);
 
@@ -37,5 +39,6 @@ public class MovieDetailsActivity extends AppCompatActivity {
         Glide.with(this)
                 .load(posterPath)
                 .into(ivPosterPath);
+        tvOverview.setText(movieOverview);
     }
 }

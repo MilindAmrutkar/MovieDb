@@ -28,6 +28,18 @@ public class Movie {
     @Expose
     private String releaseDate;
 
+    @SerializedName("overview")
+    @Expose
+    private String overview;
+
+    public String getOverview() {
+        return overview;
+    }
+
+    public void setOverview(String overview) {
+        this.overview = overview;
+    }
+
     public String getPosterPath() {
         return posterPath;
     }

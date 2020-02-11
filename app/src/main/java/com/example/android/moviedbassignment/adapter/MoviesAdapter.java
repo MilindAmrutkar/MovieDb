@@ -67,9 +67,7 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MovieViewH
                     intent.putExtra("release_date", movies.get(position).getReleaseDate());
                     intent.putExtra("movie_title", movies.get(position).getTitle());
                     intent.putExtra("poster_path", posterBaseURL + movies.get(position).getPosterPath());
-                    /*Bundle bundle = new Bundle();
-                    bundle.putSerializable("movies", movies);
-                    intent.putExtra("Movies", movies.get(position))*/
+                    intent.putExtra("overview", movies.get(position).getOverview());
                     context.startActivity(intent);
                 }
             });
